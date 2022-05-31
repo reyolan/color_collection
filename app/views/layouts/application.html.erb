@@ -6,23 +6,13 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    
     <%= vite_client_tag %>
     <%= vite_typescript_tag 'application' %>
   </head>
   <body>
     <div class="h-screen">
-      <nav class=" fixed flex justify-between items-center  h-16 px-16 w-full bg-slate-700">
-        <%= link_to "COLOR COLLECTION", root_path, class: "text-white text-2xl font-bold" %>
-        <ul class="flex gap-4">
-          <li><%= link_to "Home", root_path, class: "text-lg text-slate-200 hover:text-slate-400 font-medium" %></li>
-          <li><%= link_to "Colors", '#', class: "text-lg text-slate-200 hover:text-slate-400 font-medium" %></h1>
-          <li><%= link_to "Add Color", '#', class: "text-lg text-slate-200 hover:text-slate-400 font-medium" %></h1>
-          <li><%= link_to "About", '#', class: "text-lg text-slate-200 hover:text-slate-400 font-medium" %></h1>
-        </ul>
-      </nav>
+      <%= render 'layouts/navigation'%>
       <%= yield %>
     </div>
   </body>
 </html>
-

@@ -1,12 +1,5 @@
 import "../../assets/stylesheets/application.css";
 
-console.log("Vite ⚡️ Rails");
-
-console.log(
-  "Visit the guide for more information: ",
-  "https://vite-ruby.netlify.app/guide/rails"
-);
-
 // Example: Load Rails libraries in Vite.
 //
 // import * as Turbo from '@hotwired/turbo'
