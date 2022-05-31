@@ -80,7 +80,7 @@ function initializeColorInputAndColorFields(
   if (rgbField.value) {
     pickerElement.value = `#${hexField.value}`;
   } else {
-    hexField.value = `${pickerElement.value}`;
+    hexField.value = removeFirstCharacter(pickerElement.value);
     hslField.value = convertHexToHsl(hexField.value);
     rgbField.value = convertHexToRgb(hexField.value);
   }
