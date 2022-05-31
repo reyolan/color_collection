@@ -52,3 +52,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'net-smtp', require: false
 gem 'vite_rails'
+gem 'minitest', group: :test
+gem 'minitest-reporters', group: :test

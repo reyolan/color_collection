@@ -1,0 +1,25 @@
+<% provide(:title, @color.name)%>
+<div class="h-[calc(100%-64px)] bg-slate-600 text-slate-200">
+  <h1 class="text-5xl font-bold text-white text-center p-6"><%= @color.name %></h1>
+  <% if flash[:success] %>
+    <div class="success"> <%= flash[:success] %> </div>
+  <% end %>
+  <div class="flex flex-col items-center justify-center bg-slate-700 rounded-md p-6 ">
+    <div class="flex flex-col gap-4">
+      <div class="flex gap-6">
+        <div class="h-48 w-48 bg-[#<%= @color.hex %>]"></div>
+        <div class="flex flex-col">
+          <p class="font-bold">Description:</p>
+          <p><%= @color.description%></p>
+        </div>
+      </div>
+      <h1 class="font-bold m-auto">Color Codes</h1>
+      <div class="flex flex-col">
+        <p class="font-bold">HEX: <span class="font-medium">#<%= @color.hex %></span></p>
+        <p class="font-bold">RGB: <span class="font-medium">(<%= @color.rgb %>)</span></p>
+        <p class="font-bold">HSL: <span class="font-medium">(<%= @color.hsl %>)</span></p>
+      </div>
+    </div>
+    <h1>Yes</h1>
+  </div>
+</div>

@@ -54,12 +54,36 @@ function updateRgbValue(): void {
   const hexField = document.querySelector("#color_hex")! as HTMLInputElement;
   const hslField = document.querySelector("#color_hsl")! as HTMLInputElement;
 
+  initializeColorInputAndColorFields(
+    colorPickerElement,
+    rgbField,
+    hexField,
+    hslField
+  );
+
   colorPickerElement.addEventListener("input", e => {
-    const colorInputËlement = e.target as HTMLInputElement;
-    rgbField.value = convertHexToRgb(colorInputËlement.value);
-    hexField.value = removeFirstCharacter(colorInputËlement.value);
-    hslField.value = convertHexToHsl(colorInputËlement.value);
+    const colorInputElement = e.target as HTMLInputElement;
+    rgbField.value = convertHexToRgb(colorInputElement.value);
+    hexField.value = removeFirstCharacter(
+      colorInputElement.value.toUpperCase()
+    );
+    hslField.value = convertHexToHsl(colorInputElement.value);
   });
+}
+
+function initializeColorInputAndColorFields(
+  pickerElement: HTMLInputElement,
+  rgbField: HTMLInputElement,
+  hexField: HTMLInputElement,
+  hslField: HTMLInputElement
+): void {
+  if (rgbField.value) {
+    pickerElement.value = `#${hexField.value}`;
+  } else {
+    hexField.value = `${pickerElement.value}`;
+    hslField.value = convertHexToHsl(hexField.value);
+    rgbField.value = convertHexToRgb(hexField.value);
+  }
 }
 
 updateRgbValue();

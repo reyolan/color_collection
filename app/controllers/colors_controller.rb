@@ -1,4 +1,5 @@
 class ColorsController < ApplicationController
+  before_action :set_color, only: %i[show edit update destroy]
   def index
     @colors = Color.all
   end
@@ -10,19 +11,36 @@ class ColorsController < ApplicationController
   def create
     @color = Color.new(color_params)
     if @color.save
-      redirect_to @color, success: 'Color was successfully added.'
+      flash[:success] = 'Color was successfully added.'
+      redirect_to @color
     else
       render :new
     end
   end
 
   def show
-    @color = Color.find(params[:id])
   end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
+    deleted_color = @color.destroy
+    flash[:success] = "Color #{deleted_color[:name]} has been successfully deleted."
+    redirect_to colors_url
+  end
+
 
   private
 
   def color_params
     params.require(:color).permit(:name, :description, :rgb, :hex, :hsl)
+  end
+
+  def set_color
+    @color = Color.find(params[:id])
   end
 end

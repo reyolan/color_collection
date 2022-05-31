@@ -1,36 +1,36 @@
 <%= vite_typescript_tag 'color_form' %>
-<div class="flex justify-center items-center h-[calc(100%-64px)] bg-slate-600">
-  <div class="flex flex-col gap-6 bg-slate-700 p-12 rounded-lg">
-    <h1 class="text-5xl font-bold text-white text-center">Add a Color</h1>
+<div class="h-[calc(100%-64px)] bg-slate-600 text-slate-200">
+  <h1 class="text-5xl font-bold text-white text-center  p-6">Add a Color</h1>
+  <div class="flex flex-col items-center gap-6 flex-wrap bg-slate-700 rounded-md mx-12 p-6">
     <input type="color" data-color="" class="m-auto h-32 w-32 rounded bg-slate-400 cursor-pointer">
     <%= form_with model: @color do |form| %>
-      <div class= "flex gap-8">
+      <div class= "flex justify-center gap-8">
         <div>
           <div class="flex flex-col mb-2">
-            <%= form.label :name, "Name:", class: 'text-slate-200 text-lg' %>
-            <%= form.text_field :name, class: 'rounded px-1'%>
+            <%= form.label :name, "Name:", class: 'text-lg' %>
+            <%= form.text_field :name, class: 'text-slate-800 rounded px-1'%>
           </div>
           <div class="flex flex-col">
-            <%= form.label :description, "Description:", class:'text-slate-200'%>
-            <%= form.text_area :description, class: 'rounded px-1 resize-none'%>
+            <%= form.label :description, "Description:", class:''%>
+            <%= form.text_area :description, class: 'text-slate-800 rounded px-1 resize-none'%>
           </div>
         </div>
-        <div>
+        <div class="flex flex-col gap-2">
           <div class="flex flex-col">
-            <%= form.label :hex, "HEX: #", class: 'text-slate-200' %>
-            <%= form.text_field :hex, readonly: true, class: 'rounded pointer-events-none px-1' %>
+            <%= form.label :hex, "HEX: #", class: 'pointer-events-none' %>
+            <%= form.text_field :hex, readonly: true, class: ' text-slate-800 rounded pointer-events-none px-1' %>
           </div>
           <div class="flex flex-col">
-            <%= form.label :rgb, "RGB:", class: 'text-slate-200' %>
-            <%= form.text_field :rgb, readonly: true, class: 'rounded pointer-events-none px-1' %>
+            <%= form.label :rgb, "RGB:", class: 'pointer-events-none' %>
+            <%= form.text_field :rgb, readonly: true, class: ' text-slate-800 rounded pointer-events-none px-1' %>
           </div>
           <div class="flex flex-col">
-            <%= form.label :hsl, "HSL: ", class: 'text-slate-200' %>
-            <%= form.text_field :hsl, readonly: true, class: 'rounded pointer-events-none px-1' %>
+            <%= form.label :hsl, "HSL: ", class: 'pointer-events-none' %>
+            <%= form.text_field :hsl, readonly: true, class: ' text-slate-800 rounded pointer-events-none px-1' %>
           </div>
         </div>
       </div>
-      <%= form.submit "Add Color", class: 'bg-slate-300 rounded-md px-4 py-2 font-medium cursor-pointer hover:ring-2 ring-slate-400'%>
+      <%= form.submit "Add Color", class: 'bg-slate-300 text-slate-800 rounded-md px-4 py-2 font-medium cursor-pointer hover:ring-2 ring-slate-400'%>
     <% end %>
   </div>
 </div>
