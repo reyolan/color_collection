@@ -11,8 +11,7 @@ class ColorsController < ApplicationController
   def create
     @color = Color.new(color_params)
     if @color.save
-      flash[:success] = 'Color was successfully added.'
-      redirect_to @color
+      redirect_to @color, success: 'Color successfully added.'
     else
       render :new
     end
@@ -24,8 +23,7 @@ class ColorsController < ApplicationController
 
   def update
     if @color.update(color_params)
-      flash[:success] = 'Color successfully updated.'
-      redirect_to @color
+      redirect_to @color, success: 'Color successfully updated.'
     else
       render :edit
     end
@@ -33,8 +31,7 @@ class ColorsController < ApplicationController
 
   def destroy
     deleted_color = @color.destroy
-    flash[:success] = "Color #{deleted_color[:name]} has been successfully deleted."
-    redirect_to colors_url
+    redirect_to colors_url, success: "Color #{deleted_color[:name].inspect} has been successfully deleted."
   end
 
   private
