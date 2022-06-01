@@ -1097,6 +1097,21 @@
   "resolved" "https://registry.npmjs.org/@types/q/-/q-1.5.5.tgz"
   "version" "1.5.5"
 
+"@types/rails__activestorage@^7.0.1":
+  "integrity" "sha512-H8mjwqFNweMfvgg8U+rdsonqjouETdqZxEOfzARiA4ag8jtLHFhjfAgFF6gWMnzVpXgQPrJw1boiknx9rV23Eg=="
+  "resolved" "https://registry.npmjs.org/@types/rails__activestorage/-/rails__activestorage-7.0.1.tgz"
+  "version" "7.0.1"
+
+"@types/rails__ujs@^6.0.1":
+  "integrity" "sha512-CVwNOdzTQ9qn6X6HPwx6ikH1T9ueJTdfjwFlXFhGvzXsQuESUksibfSosgxs1D/Q1kVEpjxeXD2RzqJv0Ma5Gw=="
+  "resolved" "https://registry.npmjs.org/@types/rails__ujs/-/rails__ujs-6.0.1.tgz"
+  "version" "6.0.1"
+
+"@types/turbolinks@^5.2.0":
+  "integrity" "sha512-xEgHb25lj23EaUlsU3Y4KlFH7elhlYINGSnqyn/8zmcMnenY4Idyjk/x9kw1kOoOToY3de9fD8NSwRzNc6f5nw=="
+  "resolved" "https://registry.npmjs.org/@types/turbolinks/-/turbolinks-5.2.0.tgz"
+  "version" "5.2.0"
+
 "@webassemblyjs/ast@1.9.0":
   "integrity" "sha512-C6wW5L+b7ogSDVqymbkkvuW9kruN//YisMED04xzeBBqjHa2FYnmvOlS6Xj68xWQRgWvI9cIglsjFowH/RJyEA=="
   "resolved" "https://registry.npmjs.org/@webassemblyjs/ast/-/ast-1.9.0.tgz"

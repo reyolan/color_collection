@@ -18,13 +18,17 @@ class ColorsController < ApplicationController
     end
   end
 
-  def show
-  end
+  def show; end
 
-  def edit
-  end
+  def edit; end
 
   def update
+    if @color.update(color_params)
+      flash[:success] = 'Color successfully updated.'
+      redirect_to @color
+    else
+      render :edit
+    end
   end
 
   def destroy
@@ -32,7 +36,6 @@ class ColorsController < ApplicationController
     flash[:success] = "Color #{deleted_color[:name]} has been successfully deleted."
     redirect_to colors_url
   end
-
 
   private
 

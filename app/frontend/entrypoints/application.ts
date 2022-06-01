@@ -1,12 +1,11 @@
 import "../../assets/stylesheets/application.css";
+import * as ActiveStorage from "@rails/activestorage";
+import Rails from "@rails/ujs";
+import Turbolinks from "turbolinks";
 
-// Example: Load Rails libraries in Vite.
-//
-// import * as Turbo from '@hotwired/turbo'
-// Turbo.start()
-//
-// import ActiveStorage from '@rails/activestorage'
-// ActiveStorage.start()
+ActiveStorage.start();
+Rails.start();
+Turbolinks.start();
 //
 // // Import all channels.
 // const channels = import.meta.globEager('./**/*_channel.js')
