@@ -1,0 +1,10 @@
+<% if @color.errors.any? %>
+  <div id="error_explanation">
+    <p> The submitted color has <%= pluralize(@color.errors.count, "error")%>. </p>
+    <ul class="list-disc">
+      <% @color.errors.full_messages.each do |message| %>
+        <li> <%= message %> </li>
+      <%end%>
+    </ul>
+  </div>
+<% end %>
