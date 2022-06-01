@@ -1,7 +1,7 @@
 class ColorsController < ApplicationController
   before_action :set_color, only: %i[show edit update destroy]
   def index
-    @colors = Color.all
+    @colors = Color.all.order(name: :asc)
   end
 
   def new
