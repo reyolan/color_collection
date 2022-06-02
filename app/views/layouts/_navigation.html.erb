@@ -1,5 +1,10 @@
  <nav class="flex justify-between items-center h-16 px-16 w-full bg-slate-700">
-  <%= link_to "COLOR COLLECTION", root_path, class: "text-white text-2xl font-bold" %>
+  <%= link_to root_path, class: "text-white text-2xl font-bold" do %>
+    <div class="flex gap-3 items-center">
+      <%= image_tag "logo.png", class: "w-10" %>
+      <p>COLOR COLLECTION</p>
+    </div>
+  <% end %>
   <ul class="flex gap-4">
     <li><%= link_to "Home", root_path, class: "text-lg text-slate-200 hover:text-slate-400 font-medium" %></li>
     <li><%= link_to "Colors", colors_path, class: "text-lg text-slate-200 hover:text-slate-400 font-medium" %></h1>
