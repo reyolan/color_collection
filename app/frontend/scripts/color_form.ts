@@ -77,7 +77,6 @@ function initializeColorInputAndColorFields(
   hexField: HTMLInputElement,
   hslField: HTMLInputElement
 ): void {
-  console.log("Loaded");
   if (rgbField.value) {
     pickerElement.value = `#${hexField.value}`;
   } else {
@@ -87,4 +86,8 @@ function initializeColorInputAndColorFields(
   }
 }
 
-updateRgbValue();
+document.addEventListener("turbolinks:load", () => {
+  if (document.querySelector("[data-color-form]")) {
+    updateRgbValue();
+  }
+});
