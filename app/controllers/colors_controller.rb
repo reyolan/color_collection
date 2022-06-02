@@ -11,7 +11,7 @@ class ColorsController < ApplicationController
   def create
     @color = Color.new(color_params)
     if @color.save
-      redirect_to @color, success: 'Color successfully added.'
+      redirect_to color_url(@color), success: 'Color successfully added.'
     else
       render :new
     end
@@ -23,7 +23,7 @@ class ColorsController < ApplicationController
 
   def update
     if @color.update(color_params)
-      redirect_to @color, success: 'Color successfully updated.'
+      redirect_to color_url(@color), success: 'Color successfully updated.'
     else
       render :edit
     end
