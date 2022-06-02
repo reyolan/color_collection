@@ -1,24 +1,38 @@
-# README
+# Color Collection
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple CRUD app for knowing the basics of Ruby on Rails. This is a CRUD app for collecting different colors that may serve as a bookmark or to remember color codes that may be useful in the future for one's future designs.
 
-Things you may want to cover:
+## Getting started
 
-* Ruby version
+To get started with the app, clone the repo and access the created directory:
 
-* System dependencies
+```
+$ git clone git@github.com:reyolan/color_collection.git
+$ cd color_collection
+```
 
-* Configuration
+Make sure you're using a compatible version of Node.js:
 
-* Database creation
+```
+$ node -v
+v16.15.0
+```
 
-* Database initialization
+Install the needed gems and node modules:
 
-* How to run the test suite
+```
+$ bundle install
+$ yarn
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Next, migrate the database:
 
-* Deployment instructions
+```
+$ bin/rails db:migrate
+```
 
-* ...
+Run the app in a local server:
+
+```
+$ bin/rails server
+```
