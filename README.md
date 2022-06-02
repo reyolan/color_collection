@@ -1,6 +1,6 @@
 # Color Collection
 
-This is a simple CRUD app for knowing the basics of Ruby on Rails. This is a CRUD app for collecting different colors that may serve as a bookmark or to remember color codes that may be useful in the future for one's future designs.
+This is a simple CRUD app for knowing the basics of Ruby on Rails and its MVC architectural pattern. An app for collecting different colors that may serve as a bookmark for colors or to remember color codes that may be useful in the future for one's future designs.
 
 ## Getting started
 
