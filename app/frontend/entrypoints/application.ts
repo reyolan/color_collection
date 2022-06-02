@@ -6,6 +6,7 @@ import Turbolinks from "turbolinks";
 ActiveStorage.start();
 Rails.start();
 Turbolinks.start();
+
 //
 // // Import all channels.
 // const channels = import.meta.globEager('./**/*_channel.js')
