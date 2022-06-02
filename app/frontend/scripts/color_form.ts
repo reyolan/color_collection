@@ -77,6 +77,7 @@ function initializeColorInputAndColorFields(
   hexField: HTMLInputElement,
   hslField: HTMLInputElement
 ): void {
+  console.log("Loaded");
   if (rgbField.value) {
     pickerElement.value = `#${hexField.value}`;
   } else {
