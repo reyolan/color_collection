@@ -1,6 +1,6 @@
 <% provide(:title, @color.name)%>
 <div class="h-[calc(100%-88px)] bg-slate-600 text-slate-200 p-4 overflow-auto">
-  <h1 class="text-5xl font-bold text-white text-center"><%= @color.name %></h1>
+  <h1 class="text-5xl font-bold text-white text-center"><%= yield(:title) %></h1>
   <%= render 'shared/success_flash'%>
   <div class="flex flex-col items-center justify-center bg-slate-700 rounded-md p-6 sm:w-fit m-auto my-6">
     <div class="flex flex-col gap-4">

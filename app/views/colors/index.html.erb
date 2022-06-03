@@ -1,5 +1,6 @@
+<% provide(:title, "Colors") %>
 <div class="h-[calc(100%-88px)] bg-slate-600 p-4 overflow-auto">
-  <h1 class="text-5xl font-bold text-white text-center">All Colors</h1>
+  <h1 class="text-5xl font-bold text-white text-center"><%= yield(:title) %></h1>
   <%= render 'shared/success_flash'%>
   <div class="flex gap-6 flex-wrap bg-slate-700 rounded-md p-6 w-fit m-auto mt-6 justify-around text-slate-200">
     <% if @colors.count > 0 %>
