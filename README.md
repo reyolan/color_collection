@@ -25,10 +25,11 @@ $ bundle install
 $ yarn
 ```
 
-Next, migrate the database:
+Next, create and setup the database (database migrations/schema):
 
 ```
-$ bin/rails db:migrate
+$ bin/rails db:create
+$ bin/rails db:setup
 ```
 
 Run the app in a local server:
@@ -36,3 +37,5 @@ Run the app in a local server:
 ```
 $ bin/rails server
 ```
+
+You can then visit the site with this URL: http://localhost:3000
