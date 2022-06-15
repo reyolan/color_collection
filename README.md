@@ -28,7 +28,6 @@ $ yarn
 Next, create and setup the database (database migrations/schema):
 
 ```
-$ bin/rails db:create
 $ bin/rails db:setup
 ```
 
