@@ -31,10 +31,11 @@ Next, create and setup the database (database migrations/schema):
 $ bin/rails db:setup
 ```
 
-Run the app in a local server:
+Run the app by starting the Rails dev server and Vite.js dev server:
 
 ```
 $ bin/rails server
+$ bin/vite dev
 ```
 
 You can then visit the site with this URL: http://localhost:3000
