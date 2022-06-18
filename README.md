@@ -2,6 +2,14 @@
 
 This is a simple CRUD app for knowing the basics of Ruby on Rails and its MVC architectural pattern. An app for collecting different colors that may serve as a bookmark for colors or to remember color codes that may be useful in the future for one's future designs.
 
+## Technologies
+
+- Ruby 3.1.2
+- Rails 6.1.6
+- PostgreSQL 14.2
+- NodeJS 16.15.0
+- Yarn 1.22.18
+
 ## Getting started
 
 To get started with the app, clone the repo and access the created directory:
